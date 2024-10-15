@@ -5,5 +5,4 @@ function cook(ingredient1, ingredient2) {
   console.log("The " + ingredient1 + " is in " + ingredient2);
 }
 
-
 cook("burger", "bun");
