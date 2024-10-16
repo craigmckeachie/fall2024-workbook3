@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css" />
+  </head>
+  <body>
+    <main>
+      <article>
+        <h3>Calculator</h3>
+
+        <form>
+          <label for="number1Input">Number 1</label>
+          <input type="number" id="number1Input" />
+
+          <label for="number2Input">Number 2</label>
+          <input type="number" id="number2Input" />
+
+          <label for="answerInput">Answer</label>
+          <input type="number" id="answerInput" />
+          <button onclick="handleAdd()" type="button">Add</button>
+        </form>
+      </article>
+    </main>
+    <script>
+      "use script";
+      //#1 Get HTML element(s)
+      let number1Input = document.getElementById("number1Input");
+      let number2Input = document.getElementById("number2Input");
+      let answerInput = document.getElementById("answerInput");
+
+      //#2 Functions
+      function add() {
+        //get the value out of the number 1 input and convert it from a string to a number and store that in a variable
+        // let number1AsString = number1Input.value
+        // let number1 = Number(number1AsString);
+        //OR
+        let number1 = Number(number1Input.value);
+
+        //get the value out of the number 2 input and convert it from a string to a number and store that in a variable
+        let number2 = Number(number2Input.value);
+
+        // add the numbers together and come up with an answer(sum)
+        let answer = number1 + number2;
+        return answer;
+      }
+
+      function displayAnswer(answer) {
+        //display or set that answer in the answer input on the page
+        answerInput.value = answer;
+      }
+
+      function handleAdd() {
+        let answer = add();
+        displayAnswer(answer);
+      }
+
+      //#3 Associate/Wire-Up/Handle by setting a function to a user event
+    </script>
+  </body>
+</html>
