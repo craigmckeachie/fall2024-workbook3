@@ -7,6 +7,7 @@ console.log(importantParagraph);
 
 let bowlRadio = document.getElementById("bowlRadio");
 let burritoRadio = document.getElementById("burritoRadio");
+let placeOrderButton = document.getElementById("placeOrderButton");
 
 function placeOrder() {
   if (bowlRadio.checked) {
@@ -17,3 +18,9 @@ function placeOrder() {
     console.log("you are one of those weird taco people, right");
   }
 }
+
+//event handling approach 2
+// placeOrderButton.onclick = placeOrder;
+
+//event handling approach 3
+placeOrderButton.addEventListener("click", placeOrder);
