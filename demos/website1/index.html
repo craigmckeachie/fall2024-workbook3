@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Website 1</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css" />
   </head>
   <body>
     <main>
@@ -15,8 +16,29 @@
         dolore.
       </p>
       <form>
-        <input type="text" />
-        <button>Save</button>
+        <!-- text -->
+        <label for="firstNameInput">First Name</label>
+        <input type="text" id="firstNameInput" placeholder="enter first name" value="Craig" />
+
+        <!-- radiobutton group -->
+        <fieldset>
+          <legend>What do you want?</legend>
+          <input type="radio" name="bowlOrBurrito" id="bowlRadio"  />
+          <label for="bowlRadio">Bowl</label>
+
+          <input type="radio" name="bowlOrBurrito" id="burritoRadio" />
+          <label for="burritoRadio">Burrito</label>
+        </fieldset>
+        <button onclick="placeOrder()" type="button">Place Order</button>
+
+        <!-- radiobutton group -->
+        <!-- <fieldset>
+          <legend>Over 21?</legend>
+          <input type="radio" name="over21Radio" id="over21RadioYes" />
+          <label for="over21RadioYes">Yes</label>
+          <input type="radio" name="over21Radio" id="over21RadioNo" />
+          <label for="over21RadioNo">No</label>
+        </fieldset> -->
       </form>
     </main>
     <script src="scripts/main.js"></script>
