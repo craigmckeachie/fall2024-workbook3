@@ -10,6 +10,8 @@ function getSupplier(code) {
   return supplier;
 }
 
+// let supplier = getSupplier(code1);
+// console.log(supplier);
 console.log(getSupplier(code1), getSupplier(code2), getSupplier(code3));
 
 function getProductNumber(code) {
