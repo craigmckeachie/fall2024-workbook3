@@ -10,9 +10,28 @@ function getSupplier(code) {
   return supplier;
 }
 
-let supplier = getSupplier(code3);
-console.log(supplier);
+console.log(getSupplier(code1), getSupplier(code2), getSupplier(code3));
 
-function getProductNumber(code) {}
+function getProductNumber(code) {
+  let positionOfColon = code.indexOf(":");
+  let positionOfHyphen = code.lastIndexOf("-");
+  let productNumber = code.substring(positionOfColon + 1, positionOfHyphen);
+  return productNumber;
+}
 
-function getSize(code) {}
+// let productNumber = getProductNumber(code3);
+// console.log(productNumber);
+
+console.log(getProductNumber(code1), getProductNumber(code2), getProductNumber(code3));
+
+function getSize(code) {
+  let positionOfHyphen = code.lastIndexOf("-");
+  let size = code.substring(positionOfHyphen + 1);
+  return size;
+}
+
+// let size = getSize(code3);
+// console.log(size);
+console.log(getSize(code1), getSize(code2), getSize(code3));
+
+console.log(`the (${getSize(code1)}) part ${getProductNumber(code1)} is supplied by ${getSupplier(code1)}`);
