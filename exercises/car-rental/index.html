@@ -19,15 +19,15 @@
         
         <div class="options">
           <label>Options</label>
-          <input type="checkbox" id="toll" value="3.95" /> Electronic Toll Tag ($3.95/day)<br />
+          <input type="checkbox" id="tollCheckbox" value="3.95"  /> Electronic Toll Tag ($3.95/day)<br />
           <input type="checkbox" id="gps" value="2.95" /> GPS ($2.95/day)<br />
           <input type="checkbox" id="assist" value="2.95" /> Roadside Assistance ($2.95/day)
         </div>
 
         <div class="under-25">
           <label>Under 25</label>
-          <input type="radio" name="under-25" value="yes" id="under25-yes" /> Yes
-          <input type="radio" name="under-25" value="no" id="under25-no" /> No
+          <input type="radio" name="under-25" value="yes" id="under25-yes"  /> Yes
+          <input type="radio" name="under-25" value="no" id="under25-no" checked /> No
         </div>
         <button onclick="estimateCost()">Estimate Total Cost</button>
 
